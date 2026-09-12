@@ -158,7 +158,8 @@
                             <div class="timeline-content">
                                 <span class="timeline-date">2019 - 2023</span>
                                 <h4>Bachelor of Engineering</h4>
-                                <p>Electronics and Telecommunication | Dr. Ambedkar Institute of Technology</p>
+                                <p>Electronics and Telecommunication Engineering</p>
+                                <p>Dr. Ambedkar Institute of Technology</p>
                                 <p>Bengaluru, Karnataka, India - 560100</p>
                             </div>
                         </div>
@@ -562,20 +563,6 @@
             <div class="section-header" data-aos="fade-up">
                 <span class="section-tag">Featured Work</span>
                 <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-            </div>
-            <div class="project-filters" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th-large"></i> All Projects
-                </button>
-                <button class="filter-btn" data-filter="data-engineering">
-                    <i class="fas fa-database"></i> Data Engineering
-                </button>
-                <button class="filter-btn" data-filter="data-science">
-                    <i class="fas fa-brain"></i> Data Science & ML
-                </button>
-                <button class="filter-btn" data-filter="software-engineering">
-                    <i class="fas fa-code"></i> Software Engineering
-                </button>
             </div>
 
             <div class="project-subsection-header" data-aos="fade-up">
@@ -1514,27 +1501,6 @@
         }
 
         createParticles();
-
-        // Project filtering (Data Engineering / Data Science & ML)
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.getAttribute('data-filter');
-
-                projectCards.forEach(card => {
-                    const categories = card.getAttribute('data-category') || '';
-                    if (filter === 'all' || categories.includes(filter)) {
-                        card.style.display = '';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
 
         // Active nav link on scroll
         window.addEventListener('scroll', () => {
